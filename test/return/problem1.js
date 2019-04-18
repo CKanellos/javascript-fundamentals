@@ -6,8 +6,12 @@ let fs = require('fs');
 let source = fs
   .readFileSync(__dirname + '/../../src/return/problem1.js')
   .toString();
+
+// Don't count any comments
+source = source.replace(/\/\/.*/g, '');
+
+// Don't count whitespace
 source = source.replace(/\s/g, '');
-console.log(source);
 
 describe('Source', function() {
   it('is less than 85 characters', function() {
