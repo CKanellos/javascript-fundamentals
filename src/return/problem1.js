@@ -1,6 +1,5 @@
 // Remove as many characters from this function without changing its meaning.
 // In other words, make this function as succinct as possible
-// Also, remove these comments
 
 function f(x) {
   if (x > 10) {
